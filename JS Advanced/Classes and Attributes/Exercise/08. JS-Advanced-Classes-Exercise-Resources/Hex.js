@@ -1,0 +1,48 @@
+class Hex {
+    constructor(value) {
+        this.value = value;
+    }
+
+
+    valueOf() {
+        return this.value;
+    }
+
+    toString() {
+        return `0x${this.value.toString(16).toUpperCase()}`;
+    }
+
+    plus(number) {
+        let newNumber = 0;
+        if (typeof number === 'Hex') {
+            newNumber = this.valueOf() + number.valueOf();
+        } else {
+            newNumber = this.valueOf() + number;
+        }
+        return new Hex(newNumber);
+
+    }
+
+    minus(number) {
+        let newNumber = 0;
+        if (typeof number === 'Hex') {
+            newNumber = this.valueOf() - number.valueOf();
+        } else {
+            newNumber = this.valueOf() - number;
+        }
+        return new Hex(newNumber);
+    }
+
+    parse(string){
+        return string.slice(2).toString(10);
+    }
+}
+
+
+let FF = new Hex(255);
+console.log(FF.toString());
+FF.valueOf() + 1 == 256;
+let a = new Hex(10);
+let b = new Hex(5);
+console.log(a.plus(b).toString());
+console.log(a.plus(b).toString() === '0xF');

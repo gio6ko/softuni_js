@@ -1,0 +1,10 @@
+{
+  "name": "Architecture and Testing",
+  "version": "1.0.0",
+  "dependencies": {
+    "chai": "^4.3.4"
+  },
+  "devDependencies": {
+    "playwright-firefox": "^1.9.2"
+  }
+}

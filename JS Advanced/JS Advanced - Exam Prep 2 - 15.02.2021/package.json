@@ -1,0 +1,9 @@
+{
+  "name": "JS Advanced - Exam Prep 2 - 15.02.2021",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*"
+  }
+}
